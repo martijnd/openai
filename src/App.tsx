@@ -30,7 +30,12 @@ function App() {
   }
 
   return (
-    <main className="container">
+    <main>
+      <h2>Subject generator</h2>
+      <p>
+        Just enter a subject line that you want to generate some better
+        suggestions for and press on the sparkles.
+      </p>
       <form onSubmit={generateSuggestions}>
         <input
           type="text"
@@ -43,7 +48,7 @@ function App() {
       {loading && <Spinner />}
       {!!suggestions.length && (
         <div className="fade-in">
-          <h3>Suggestions</h3>
+          <h2>Suggestions</h2>
           {suggestions.map((suggestion) => (
             <li key={suggestion}>{suggestion}</li>
           ))}
